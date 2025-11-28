@@ -11,10 +11,11 @@ struct CountryName: View {
     var countryName: String
     var body: some View {
         Text("Tap the flag of")
-            .foregroundStyle(.secondary)
+            .foregroundStyle(.white)
             .font(.subheadline.weight(.heavy))
         Text(countryName)
             .font(.largeTitle.weight(.semibold))
+            .foregroundStyle(.white)
     }
 }
 
