@@ -35,22 +35,14 @@ struct ContentView: View {
                 // Game prompt of correct answer
                 VStack(spacing: 15) {
                     VStack {
-                        Text("Tap the flag of")
-                            .foregroundStyle(.secondary)
-                            .font(.subheadline.weight(.heavy))
-                        Text(countries[correctAnswer])
-                            .font(.largeTitle.weight(.semibold))
+                        CountryName(countryName: countries[correctAnswer])
                     }
                     
                     ForEach(0..<3) { index in
                         Button {
                             flagTapped(index)
                         } label: {
-                            Image(countries[index])
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 20)
-                                .background(.regularMaterial)
-                                .clipShape(.rect(cornerRadius: 20))
+                            FlagImage(flagName: countries[index])
                         }
                     }
                 }
